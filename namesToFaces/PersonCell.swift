@@ -11,5 +11,14 @@ import UIKit
 class PersonCell: UICollectionViewCell {
 	@IBOutlet var imageView: UIImageView!
 	@IBOutlet var name: UILabel!
-    
+	
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		
+		self.imageView.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
+		self.imageView.layer.borderWidth = 2
+		self.imageView.layer.cornerRadius = 3
+		self.layer.cornerRadius = 7
+	}
+	
 }
